@@ -1,0 +1,44 @@
+﻿:root{
+    --color-insertar:#a7e9af;
+    --color-actualizar:#75b79e;
+    --color-historial:#29639f;
+}
+.separacionU {
+    margin-left: 23px;
+}
+
+.separacionC {
+    margin-right: 25px;
+}
+
+.separacionB {
+    margin-right: 25px;
+}
+
+.separacion_Boton1 {
+    text-align: left;
+    margin-left: 25px;
+    
+}
+.separacion_Boton2 {
+    text-align: right;
+    margin-right: 25px;
+    
+}
+.agrandar{
+    width:180px;
+}
+
+.table {
+    width: 20px;
+    height: 20px;
+}
+.bg-insertar {
+   background:var(--color-insertar);
+}
+.bg-historial {
+  background:var(--color-historial);
+}
+.bg-actualizar {
+  background:var(--color-actualizar);
+}

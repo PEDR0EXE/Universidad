@@ -1,0 +1,38 @@
+﻿
+
+@using (Html.BeginForm())
+{
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- se crea una tabla en el encabezado estara el nombre de Archivo, Tamaño, Tipo y Fecha  -->
+        <table>
+            <thead>
+                <tr>
+                    <th> Archivo</th>
+                    <th> Tamaño</th>
+                    <th> Tipo</th>
+                    <th> Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- en la parte de el cuerpo de la tabla estara los datos de la base de datos de Documento -->
+                @foreach (var DOCS in Model)
+                {
+                    <tr>
+                        <td>@DOCS.Archivo</td>
+                        <td>@DOCS.Tamaño</td>
+                        <td>@DOCS.tipo</td>
+                        <td>@DOCS.Fecha</td>
+                        <!-- en la  ultima parte de la celda es un boton para descargar los documentos 
+                            que estan registrados en la base de datos y guardados en la carperta descargas  -->
+                        <td>@Html.ActionLink("Download", "Download", new { CsvName = @DOCS.Archivo }) </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+</html>
+}
